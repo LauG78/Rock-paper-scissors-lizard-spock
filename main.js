@@ -4,57 +4,52 @@ let pcChoice=document.getElementById("computer-played");
 //user buttons
 
 let playerButton="";
-function playerChoosing(){
+
     userChoice=document.getElementById("user-played");
     
     document.getElementById("scissors").addEventListener("click",()=>{
         playerButton="scissors";
-        alert(playerButton)
         userChoice.innerHTML="Your choice is " + playerButton;
     })
     document.getElementById("paper").addEventListener("click",()=>{
         playerButton="paper";
-        alert(playerButton)
         userChoice.innerHTML="Your choice is " + playerButton;
     })
     document.getElementById("rock").addEventListener("click",()=>{
         playerButton="rock";
-        alert(playerButton)
         userChoice.innerHTML="Your choice is " + playerButton;
     })
     document.getElementById("lizard").addEventListener("click",()=>{
         playerButton="lizard";
-        alert(playerButton)
-        userChoice.innerHTML="Your choice is " + playerButton;
+        userChoice.innerHTML="Your choice is: " + playerButton;
     })
     document.getElementById("spock").addEventListener("click",()=>{
         playerButton="spock";
-        alert(playerButton)
         userChoice.innerHTML="Your choice is " + playerButton;
     })
-       
     
-    console.log(playerButton);
-    userChoice.innerHTML="Your choice is " + playerButton;
-    }
-    playerChoosing()
-
-    //pc-button
+    
+    //pc-button   
+var computerChoice=""
 document.getElementById("computer-button").addEventListener("click", ()=>{
     var choices = ["scissors", "paper", "rock", "lizard", "spock"];
+    if(choices.includes(playerButton)){ 
     var computerChoices = Math.floor(Math.random()*5);
     computerChoice=choices[computerChoices];
     console.log(computerChoice);
-    pcChoice.innerHTML="Computer's choice is " + computerChoice;
+    pcChoice.innerHTML="Computer's choice is " + computerChoice;}
+    else{
+        alert ("You choose first")
+    }
 })
-
 
 
 //comparision
 
 let win_lose=document.getElementById("win-lose");
-let userC=userChoice;
-let computerC = computerChoice
+let userC=playerButton;
+let computerC=computerChoice;
+function compareResults(){
 if (computerC===userC){
     message = "It's a draw";
 }
@@ -86,10 +81,20 @@ else if (userC==="spock"){
     if (userC==="rock"|| userC==="scissors")
         message="You lost";
     }    
-    else {message="You win"}
+    else if(userC==="lizard"||userC==="paper"){
+        message="You win"}
+else {message="Result"}        
 console.log(message);
-win_lose=message;
+let messages=["It's a draw", "You win", "You lost"];
+if (messages.includes(message)){
+    win_lose.innerHTML=message;
+}
+else {
+    win_lose.innerHTML="Result"
+}
+}
+compareResults()
 
 function reset(){
-    document.getElementById("computer-played","user-played").reset();
+    document.getElementById(playerButton="", computerChoice="");
 }
