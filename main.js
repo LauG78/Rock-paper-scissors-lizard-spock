@@ -87,9 +87,9 @@ else if (userC==="spock"){
     if (userC==="rock"|| userC==="scissors")
         message="You lost";
     }    
-    else if(userC==="lizard"||userC==="paper"){
+    else {
         message="You win"}
-else {message="Result"}        
+             
 console.log(message);
 let messages=["It's a draw", "You win", "You lost"];
 if (messages.includes(message)){

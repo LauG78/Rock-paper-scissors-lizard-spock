@@ -13,9 +13,9 @@ body{
     background-color:aqua;
     height: 5rem;
     color: antiquewhite;
-    width: 20rem;
+    width: 80%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: 700;
     border-radius: 15px;
     
@@ -36,10 +36,10 @@ body{
     align-items: center;
 }
 .computerButton{
-    width: 20rem;
+    width: 80%;
     height: 5rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: 700;
     border-radius: 15px;
 }
@@ -55,22 +55,25 @@ body{
 ul{
     font-family: 'Times New Roman', Times, serif;
     text-align: left;
-    text-indent: 25%;
+    text-indent: 5%;
     font-size: 0.8rem;
     
 }
 .played{
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    height:max-content;
 }
 .chosen{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 70%;
-    background-color: darkorange;
+    justify-content: space-around;
+    font-weight: 700;
 }
 .result{
     width: 30%;
-    background-color: darkorchid;
+    align-self: center;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
