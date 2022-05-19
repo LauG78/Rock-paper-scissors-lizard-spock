@@ -3,48 +3,37 @@ let pcChoice=document.getElementById("computer-played");
 
 //user buttons
 
-let playerButton="x";
+let playerButton="";
 function playerChoosing(){
     userChoice=document.getElementById("user-played");
     
     document.getElementById("scissors").addEventListener("click",()=>{
         playerButton="scissors";
         alert(playerButton)
-        if (playerButton==="scissors"){
         userChoice.innerHTML="Your choice is " + playerButton;
-        } else {
-        document.getElementById("paper").addEventListener("click",()=>{
-            playerButton="paper";
-            if (playerButton="paper"){
-                userChoice.innerHTML="Your choice is " + playerButton;
-            } else {
-                document.getElementById("rock").addEventListener("click", ()=>{
-                    playerButton="rock";
-                    if (playerButton="rock"){
-                        userChoice.innerHTML="Your choice is " + playerButton;
-                    }
-                    else {
-                        document.getElementById("lizard").addEventListener("click", ()=>{
-                            playerButton="lizard";
-                            if (playerButton="lizard"){
-                                userChoice.innerHTML="Your choice is " + playerButton;
-                            } else {
-                                document.getElementById("spock").addEventListener("click", ()=>{
-                                    playerButton="spock";
-                                    if (playerButton="spock"){
-                                        userChoice.innerHTML="Your choice is " + playerButton;
-                                    }
-                            }
-                        )
-                   }
-
     })
-    
-    }}
-    
-    )}
-    
+    document.getElementById("paper").addEventListener("click",()=>{
+        playerButton="paper";
+        alert(playerButton)
+        userChoice.innerHTML="Your choice is " + playerButton;
     })
+    document.getElementById("rock").addEventListener("click",()=>{
+        playerButton="rock";
+        alert(playerButton)
+        userChoice.innerHTML="Your choice is " + playerButton;
+    })
+    document.getElementById("lizard").addEventListener("click",()=>{
+        playerButton="lizard";
+        alert(playerButton)
+        userChoice.innerHTML="Your choice is " + playerButton;
+    })
+    document.getElementById("spock").addEventListener("click",()=>{
+        playerButton="spock";
+        alert(playerButton)
+        userChoice.innerHTML="Your choice is " + playerButton;
+    })
+       
+    
     console.log(playerButton);
     userChoice.innerHTML="Your choice is " + playerButton;
     }
@@ -64,36 +53,37 @@ document.getElementById("computer-button").addEventListener("click", ()=>{
 //comparision
 
 let win_lose=document.getElementById("win-lose");
-let userC="spock";
-let computerC = pcChoice
+let userC=userChoice;
+let computerC = computerChoice
 if (computerC===userC){
     message = "It's a draw";
 }
 else if (computerC==="scissors"){
-    if (userC==="paper"||"lizard"){
+    if (userC==="paper"|| userC==="lizard"){
         message="You lost";
     }
     else {message="You win"}
 }
 else if (computerC==="paper"){
-    if (userC==="rock"||"spock"){
+    if (userC==="rock"|| userC==="spock"){
         message="You lost";
     }
     else {message="You win"}
 }
 else if (computerC==="rock"){
-    if (userC==="lizard"||"scissors"){
+    if (userC==="lizard"|| userC==="scissors"){
         message="You lost";
     }
     else { message="You win"}
 }
 else if (computerC==="lizard"){
-    if (userC==="spock"||"paper"){
+    if (userC==="spock"|| userC==="paper"){
         message="You lost";
     }
     else {message="You win"}
 }
-else if (userC==="scissors"||"rock"){
+else if (userC==="spock"){
+    if (userC==="rock"|| userC==="scissors")
         message="You lost";
     }    
     else {message="You win"}
