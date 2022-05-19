@@ -41,15 +41,21 @@ document.getElementById("computer-button").addEventListener("click", ()=>{
     else{
         alert ("You choose first")
     }
+    winOrLose();
 })
 
 
 //comparision
 
 let win_lose=document.getElementById("win-lose");
+
+function winOrLose(){
 let userC=playerButton;
 let computerC=computerChoice;
-function compareResults(){
+console.log(computerC);
+console.log(userC);
+
+
 if (computerC===userC){
     message = "It's a draw";
 }
@@ -93,7 +99,6 @@ else {
     win_lose.innerHTML="Result"
 }
 }
-compareResults()
 
 function reset(){
     document.getElementById(userChoice.innerHTML="Your choice:", pcChoice.innerHTML="Computer's choice:");
