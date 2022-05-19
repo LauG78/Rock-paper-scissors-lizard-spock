@@ -96,5 +96,5 @@ else {
 compareResults()
 
 function reset(){
-    document.getElementById(playerButton="", computerChoice="");
+    document.getElementById(userChoice.innerHTML="Your choice:", pcChoice.innerHTML="Computer's choice:");
 }
