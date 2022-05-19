@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scissors Paper Rock Lizard Spock</title>
+    <link rel = "stylesheet"  type="text/css" href="style.css">
+</head>
+<body>
+    <div class="computer-button">
+        <button type="button" class="computerButton" id="computer-button">Computer Choose</button> <hr>
+        <button type="button" class="computerButton" id="reset"  value="Reset" onclick="reset()">Reset</button>
+    </div>
+
+    <div class="playground">
+        <p>This is the playground, and these are rules:</p>
+        <ul style="list-style: none">
+            <li><em>Scissors cut Paper</em></li>
+            <li><em>Paper covers Rock</em></li>
+            <li><em>Rock crushes Lizard</em></li>
+            <li><em>Lizard poisons Spock</em></li>
+            <li><em>Spock smashes Scissors</em></li>
+            <li><em>Scissors decapitate Lizard</em></li>
+            <li><em>Lizard eats Paper</em></li>
+            <li><em>Paper disproves Spock</em></li>
+            <li><em>Spock vaporizes Rock</em></li>
+            <li><em>Rock crushes Scissors</em></li>
+        </ul>
+        <div class="played">
+            <div class="chosen">
+                <label class="label-played" id="computer-played"><span class="label-played">Computer's choice: </span>x</label>
+                <label class="label-played" id="user-played"><span class="label-played">Your choice: </span>x</label>
+            </div>
+            <div class="result">
+                <label class="win-or-lose" id="win-lose"><span class="win-or-lose"></span></label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="user-buttons">
+        <button type="button" class="userButtons" id="scissors">Scissors</button><hr>
+        <button type="button" class="userButtons" id="paper">Paper</button><hr>
+        <button type="button" class="userButtons" id="rock">Rock</button><hr>
+        <button type="button" class="userButtons" id="lizard">Lizard</button><hr>
+        <button type="button" class="userButtons" id="spock">Spock</button><hr>
+    </div>
+    
+
+<script src="main.js"></script>
+</body>
+</html>
