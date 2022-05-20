@@ -54,8 +54,6 @@ let userC=playerButton;
 let computerC=computerChoice;
 console.log(computerC);
 console.log(userC);
-
-
 if (computerC===userC){
     message = "It's a draw";
 }
@@ -91,15 +89,44 @@ else if (userC==="spock"){
         message="You win"}
              
 console.log(message);
+
 let messages=["It's a draw", "You win", "You lost"];
 if (messages.includes(message)){
     win_lose.innerHTML=message;
 }
 else {
     win_lose.innerHTML="Result"
+
 }
+score();
 }
 
+//function score
+let player_score=document.getElementById("player-score");
+let ps=parseInt(player_score.innerHTML);
+console.log(ps);
+let computer_score=document.getElementById("computer-score");
+let cs=parseInt(computer_score.innerHTML);
+function score(){
+
+if (message==="You win"){
+    ps=ps+1;
+}
+else if (message==="You lost"){
+    cs=cs+1;
+}
+else {
+    ps=ps;
+    cs=cs;
+}
+computer_score.innerHTML=cs;
+player_score.innerHTML=ps;
+
+}
+
+
+//reset button
+
 function reset(){
-    document.getElementById(userChoice.innerHTML="Your choice:", pcChoice.innerHTML="Computer's choice:");
+    document.getElementById(userChoice.innerHTML="Your choice:", pcChoice.innerHTML="Computer's choice:", player_score.innerHTML="0", computer_score.innerHTML="0");
 }

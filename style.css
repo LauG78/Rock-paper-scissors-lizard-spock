@@ -1,25 +1,31 @@
 @media (max-width:480px){
     body {
         flex-direction: column;
-        width: 768px
+        width:min-content;
     };}
 @media (max-width:480px){
     ul {
         display: none;
     };}
-    
+ 
 @media (max-width:480px){    
     .user-buttons{
-        width: 100vw;
+        width: 75vw;
     };}
 @media (max-width:480px){    
     .computer-button{
-        width: 100vw;
+        width: 75vw;
     };}
 @media (max-width:480px){    
     .playground{
-        width: 100vw;
+        width: 75vw;
+        font-size: 00.8rem
     };}
+@media (max-width:480px){
+        .chosen{
+            flex-direction: column;
+        }
+    }
 
 
 body{
@@ -61,6 +67,7 @@ body{
     background-color: aquamarine;
     align-items: center;
     width: 480px;
+
 }
 .computerButton{
     width: 80%;
