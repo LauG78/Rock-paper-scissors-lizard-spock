@@ -1,5 +1,32 @@
+@media (max-width:480px){
+    body {
+        flex-direction: column;
+        width: 768px
+    };}
+@media (max-width:480px){
+    ul {
+        display: none;
+    };}
+    
+@media (max-width:480px){    
+    .user-buttons{
+        width: 100vw;
+    };}
+@media (max-width:480px){    
+    .computer-button{
+        width: 100vw;
+    };}
+@media (max-width:480px){    
+    .playground{
+        width: 100vw;
+    };}
+
+
 body{
     display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-shrink: 1;
     }
 .user-buttons{
     display: flex;
@@ -7,7 +34,7 @@ body{
     justify-content:space-around;
     align-items: center;
     background-color: cadetblue;
-    width: 33.33%;
+    width: 480px;
 }
 .userButtons{
     background-color:aqua;
@@ -32,8 +59,8 @@ body{
     flex-direction: column;
     justify-content: center;
     background-color: aquamarine;
-    width: 33.33%;
     align-items: center;
+    width: 480px;
 }
 .computerButton{
     width: 80%;
@@ -48,9 +75,9 @@ body{
     color: antiquewhite;
 }
 .playground{
-    width: 33.33%;
     text-align: center;
     background-color:deepskyblue;
+    width: 480px;
 }
 ul{
     font-family: 'Times New Roman', Times, serif;
